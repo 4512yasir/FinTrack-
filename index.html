@@ -1,113 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trackify - Personal Finance</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="container">
-     <div class="header">
-           <!-- header start -->
-           <header>
-            <h1>Trackify - Personal Finance</h1>
-            <img src="./Assets/finance yas logo.png" alt="finance logo">
-          <!-- start of nav  -->
-           <nav>
-            <ul>
-                <li>
-                    <a href="">DASHBOARD</a>
-                    <a href="">TRANSCATION</a>
-                    <a href="">BUDGET</a>
-                </li>
-            </ul>
-           </nav>
-           <!-- end of nav  -->
-        </header>
-        <!-- header end -->
-     </div>
-        
-        <div class="main-content">
-        <!-- DASHBOARD -->
-        <div class="dashboard-summary">
-            <div class="income-summary">
-                <h3>Total Income</h3>
-                <p>$3000</p>
-            </div>
-            <div class="expense-summary">
-                <h3>Total Expense</h3>
-                <p>$1500</p>
-            </div>
-            <div class="net-balance">
-                <h3>Net Balance</h3>
-                <p>$1500</p>
-            </div>
-        </div>
-        
-        <!-- DASHBOARD -->
-         <!-- TRANSCATION list -->
-         <div class="transaction-list">
-            <h3>Transaction List</h3>
-            <ul>
-                <li>
-                    <span>Salary</span>
-                    <span class="amount">+$2000</span>
-                    <button class="delete-btn">Delete</button>
-                </li>
-                <li>
-                    <span>Groceries</span>
-                    <span class="amount">-$150</span>
-                    <button class="delete-btn">Delete</button>
-                </li>
-            </ul>
-        </div>
-        
-         <!-- TRANSCATION list -->
-          <!-- Transaction form -->
-          <div class="transaction-form">
-            <h3>Add a New Transaction</h3>
-            <form>
-                <label for="transaction-name">Transaction Name:</label>
-                <input type="text" id="transaction-name" placeholder="Enter name" required>
-        
-                <label for="transaction-amount">Amount:</label>
-                <input type="number" id="transaction-amount" placeholder="Enter amount" required>
-        
-                <label for="transaction-type">Transaction Type:</label>
-                <select id="transaction-type">
-                    <option value="income">Income</option>
-                    <option value="expense">Expense</option>
-                </select>
-        
-                <button type="submit">Add Transaction</button>
-            </form>
-        </div>
-         <!-- Transaction form -->
-          <!-- budget goals -->
-          <div class="budget-goals">
-            <h3>Set Your Budget</h3>
-            <div class="income-goal">
-                <label for="income-goal">Income Goal:</label>
-                <input type="number" id="income-goal" placeholder="Set income goal" required>
-            </div>
-            <div class="expense-goal">
-                <label for="expense-goal">Expense Goal:</label>
-                <input type="number" id="expense-goal" placeholder="Set expense goal" required>
-            </div>
-            <button class="save-goals">Save Goals</button>
-        </div>
-        
-           <!-- budget  goals -->
-
-           <!-- footer -->
-           <footer>
-            <p>&copy; 2025 Trackify - Personal Finance Dashboard | All Rights Reserved</p>
-        </footer>
-        <!-- footer -->
-        </div>
-      
+  <div class="container">
+    <div class="header">
+      <!-- header start -->
+      <header>
+        <h1>Trackify - Personal Finance</h1>
+        <img src="./Assets/finance yas logo.png" alt="finance logo">
+        <!-- start of nav -->
+        <nav>
+          <ul>
+            <li>
+              <a href="#dashboard">DASHBOARD</a>
+              <a href="#transaction">TRANSACTION</a>
+              <a href="#budget">BUDGET</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- end of nav -->
+      </header>
+      <!-- header end -->
     </div>
-    <script src="./index.js"></script>
+
+    <div class="main-content">
+      <!-- DASHBOARD -->
+      <div id="dashboard" class="dashboard-summary">
+        <div class="income-summary">
+          <h3>Total Income</h3>
+          <p></p>
+        </div>
+        <div class="expense-summary">
+          <h3>Total Expense</h3>
+          <p></p>
+        </div>
+        <div class="net-balance">
+          <h3>Net Balance</h3>
+          <p></p>
+        </div>
+      </div>
+
+      <!-- TRANSACTION list -->
+      <div id="transaction" class="transaction-list">
+        <h3>Transaction List</h3>
+        <ul>
+          <!-- Transactions will be appended here via JS -->
+        </ul>
+      </div>
+
+      <!-- TRANSACTION form -->
+      <div id="transaction-form" class="transaction-form">
+        <h3>Add a New Transaction</h3>
+        <form>
+          <label for="transaction-name">Transaction Name:</label>
+          <input type="text" id="transaction-name" placeholder="Enter name" required>
+
+          <label for="transaction-amount">Amount:</label>
+          <input type="number" id="transaction-amount" placeholder="Enter amount" required>
+
+          <label for="transaction-type">Transaction Type:</label>
+          <select id="transaction-type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+          </select>
+
+          <button type="submit">Add Transaction</button>
+        </form>
+      </div>
+
+      <!-- BUDGET goals -->
+      <div id="budget" class="budget-goals">
+        <h3>Set Your Budget</h3>
+        <div class="income-goal">
+          <label for="income-goal">Income Goal:</label>
+          <input type="number" id="income-goal" placeholder="Set income goal" required>
+        </div>
+        <div class="expense-goal">
+          <label for="expense-goal">Expense Goal:</label>
+          <input type="number" id="expense-goal" placeholder="Set expense goal" required>
+        </div>
+        <button class="save-goals">Save Goals</button>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <p>&copy; 2025 Trackify - Personal Finance Dashboard | All Rights Reserved</p>
+    </footer>
+  </div>
+  <script src="./index.js"></script>
 </body>
 </html>
